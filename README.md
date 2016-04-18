@@ -8,7 +8,7 @@ http://godoc.org/github.com/hit9/idpool
 Example
 -------
 
-[idpool_example.go](idpool_example.go)
+[pool_example.go](pool_example.go)
 
 License
 -------
