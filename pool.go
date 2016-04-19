@@ -57,3 +57,13 @@ func (p *Pool) Release(id int) {
 		p.table.SetBit(p.table, id, 0)
 	}
 }
+
+// High returns the high.
+func (p *Pool) High() int {
+	return p.high
+}
+
+// Low returns the low.
+func (p *Pool) Low() int {
+	return p.low
+}
