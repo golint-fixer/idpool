@@ -12,7 +12,10 @@
 //
 package idpool
 
-import "math/big"
+import (
+	"math"
+	"math/big"
+)
 
 // Pool is the id pool.
 type Pool struct {
@@ -23,7 +26,11 @@ type Pool struct {
 
 // New returns a new Pool for given range.
 // Range [low,high) is left open and right closed.
+// Setting high to 0 means high is MaxInt32.
 func New(low, high int) *Pool {
+	if high == 0 {
+		high = math.MaxInt32
+	}
 	return &Pool{
 		high:  high,
 		low:   low,
